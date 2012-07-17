@@ -1,0 +1,176 @@
+<p align="center" style="text-indent: 20; line-height: 150%; margin-left: 10; margin-right: 10">
+<b>Konfigurasi</b></p>
+<form method="POST">
+<div align="center">
+<center>
+<table border="0" width="95%" style="border-collapse: collapse" bordercolor="#111111" cellpadding="0" cellspacing="0">
+<tr>
+<td width="100%">
+<table border="0" cellpadding="2" width="100%" style="border: 1px solid #000080; ; border-collapse:collapse" class="tableline" bordercolor="#111111" cellspacing="0">
+<tr>
+<td width="100%" bgcolor="#FFFFFF">
+<table border="0" width="100%" class="b01" style="border-collapse: collapse" bordercolor="#111111" cellpadding="0" cellspacing="0">
+<tr>
+<td width="80%" colspan="2" align="right">
+<p align="center"><b>Konfigurasi {program_name} :</b></td>
+</tr>
+<tr>
+<td width="14%" bgcolor="#FFFFFF" align="right">Nama program :</td>
+<td width="30%" bgcolor="#FFFFFF">&nbsp;<input name="program_name" size="47" value="{program_name}"></td>
+</tr>
+<tr>
+<td width="14%" bgcolor="#FFFFFF" align="right">URL Website :</td>
+<td width="30%" bgcolor="#FFFFFF">&nbsp;<input name="program_url" size="47" value="{program_url}"></td>
+</tr>
+<tr>
+<td width="14%" bgcolor="#FFFFFF" align="right">URL member area :</td>
+<td width="30%" bgcolor="#FFFFFF">&nbsp;<input name="member_url" size="47" value="{member_url}"></td>
+</tr>
+<tr>
+<td width="14%" bgcolor="#FFFFFF" align="right">Launch date :</td>
+<td width="30%" bgcolor="#FFFFFF">&nbsp;<input name="launch_date" size="47" value="{launch_date}"></td>
+</tr>
+<tr>
+<td width="14%" bgcolor="#FFFFFF" align="right">Direktori Template :</td>
+<td width="30%" bgcolor="#FFFFFF"><b>&nbsp;</b><input type="text" name="tpldir" size="47" value="{tpldir}"></td>
+</tr>
+<tr>
+<td width="14%" bgcolor="#FFFFFF" align="right">Komisi Direct Sponsor :</td>
+<td width="30%" bgcolor="#FFFFFF">&nbsp;<input type="text" name="dsponsor_amount" size="18" value="{dsponsor_amount}"> 
+Biaya yg harus dibayar kepada direct sponsor</td>
+</tr>
+<tr>
+<td width="14%" bgcolor="#FFFFFF" align="right">Komisi Random Sponsor :</td>
+<td width="30%" bgcolor="#FFFFFF">&nbsp;<input type="text" name="rsponsor_amount" size="18" value="{rsponsor_amount}"> 
+Biaya yg harus dibayar kepada random sponsor</td>
+</tr>
+<tr>
+<td width="14%" bgcolor="#FFFFFF" align="right">Komisi Admin:</td>
+<td width="30%" bgcolor="#FFFFFF">&nbsp;<input type="text" name="admin_amount" size="18" value="{admin_amount}"> 
+Biaya yg harus dibayar kepada Admin</td>
+</tr>
+<tr>
+<td width="14%" bgcolor="#FFFFFF" align="right">Dengan Random Sponsor :</td>
+<td width="30%" bgcolor="#FFFFFF">&nbsp;<input type="text" name="with_rsponsor" size="18" value="{with_rsponsor}">
+<br>
+Ketik &quot;1&quot; jika ingin menggunakan 2 sponsor, yaitu Direct Sponsor dan Random 
+Sponsor. Ketik &quot;0&quot; jika hanya ingin menggunakan seorang sponsor saja</td>
+</tr>
+<tr>
+<td width="14%" bgcolor="#FFFFFF" align="right">Jumlah maksimum perhalaman 
+referral member : </td>
+<td width="30%" bgcolor="#FFFFFF">&nbsp;<input type="text" name="maxrefshow" size="19" value="{maxrefshow}"></td>
+</tr>
+<tr>
+<td width="14%" bgcolor="#FFFFFF" align="right">Jumlah maksimum perhalaman 
+statistik member :</td>
+<td width="30%" bgcolor="#FFFFFF">&nbsp;<input type="text" name="maxstatsshow" size="19" value="{maxstatsshow}"></td>
+</tr>
+<tr>
+<td width="14%" bgcolor="#FFFFFF" align="right">Masa berlaku cookie sponsor :</td>
+<td width="30%" bgcolor="#FFFFFF">&nbsp;<input type="text" name="cookiexpires" size="19" value="{cookiexpires}"> 
+hari</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td width="100%">&nbsp;<p align="right">
+<input type="submit" value="Simpan Konfigurasi !" name="button"></td>
+</tr>
+</table>
+</center>
+</div>
+<input type="hidden" name="doing" value="config">
+</form>
+<hr>
+<form method="POST">
+<div align="center">
+<center>
+<table border="0" width="95%" style="border-collapse: collapse" bordercolor="#111111" cellpadding="0" cellspacing="0">
+<tr>
+<td width="100%">
+<table border="0" cellpadding="2" width="100%" style="border: 1px solid #000080; ; border-collapse:collapse" class="tableline" bordercolor="#111111" cellspacing="0">
+<tr>
+<td width="100%" bgcolor="#FFFFFF">
+<table border="0" width="100%" class="b01" style="border-collapse: collapse" bordercolor="#111111" cellpadding="0" cellspacing="0">
+<tr>
+<td width="80%" colspan="2" align="right">
+<p align="center"><b>Konfigurasi Email:</b></td>
+</tr>
+<tr>
+<td width="14%" bgcolor="#FFFFFF" align="right">Judul email kepada member baru :</td>
+<td width="30%" bgcolor="#FFFFFF">&nbsp;<input type="text" name="user_title" size="48" value="{user_title}"></td>
+</tr>
+<tr>
+<td width="14%" bgcolor="#FFFFFF" align="right">Judul email kepada direct 
+sponsor :</td>
+<td width="30%" bgcolor="#FFFFFF">&nbsp;<input type="text" name="dsponsor_title" size="48" value="{dsponsor_title}"></td>
+</tr>
+<tr>
+<td width="14%" bgcolor="#FFFFFF" align="right">Judul email kepada random 
+sponsor :</td>
+<td width="30%" bgcolor="#FFFFFF">&nbsp;<input type="text" name="rsponsor_title" size="48" value="{rsponsor_title}"></td>
+</tr>
+<tr>
+<td width="14%" bgcolor="#FFFFFF" align="right">Judul email kepada admin :</td>
+<td width="30%" bgcolor="#FFFFFF">&nbsp;<input type="text" name="admin_title" size="48" value="{admin_title}"></td>
+</tr>
+<tr>
+<td width="14%" bgcolor="#FFFFFF" align="right">Judul email member aktif :</td>
+<td width="30%" bgcolor="#FFFFFF">&nbsp;<input type="text" name="active_title" size="48" value="{active_title}"></td>
+</tr>
+<tr>
+<td width="14%" bgcolor="#FFFFFF" align="right">Judul email hapus member :</td>
+<td width="30%" bgcolor="#FFFFFF">&nbsp;<input type="text" name="del_title" size="48" value="{del_title}"></td>
+</tr>
+<tr>
+<td width="14%" bgcolor="#FFFFFF" align="right">Isi email kepada member baru :</td>
+<td width="30%" bgcolor="#FFFFFF"><b>&nbsp;<textarea rows="10" name="newuser_msg" cols="37">{newuser_msg}</textarea></b></td>
+</tr>
+<tr>
+<td width="14%" bgcolor="#FFFFFF" align="right">Isi email kepada direct sponsor 
+:</td>
+<td width="30%" bgcolor="#FFFFFF">&nbsp;<b><textarea rows="10" name="dsponsor_msg" cols="37">{dsponsor_msg}</textarea></b></td>
+</tr>
+<tr>
+<td width="14%" bgcolor="#FFFFFF" align="right">Isi email kepada random sponsor 
+:</td>
+<td width="30%" bgcolor="#FFFFFF">&nbsp;<b><textarea rows="10" name="rsponsor_msg" cols="37">{rsponsor_msg}</textarea></b></td>
+</tr>
+<tr>
+<td width="14%" bgcolor="#FFFFFF" align="right">Isi email kepada admin :</td>
+<td width="30%" bgcolor="#FFFFFF">&nbsp;<b><textarea rows="10" name="admin_msg" cols="37">{admin_msg}</textarea></b></td>
+</tr>
+<tr>
+<td width="14%" bgcolor="#FFFFFF" align="right">Isi email &quot;Lupa Password&quot; :</td>
+<td width="30%" bgcolor="#FFFFFF">&nbsp;<b><textarea rows="10" name="pass_msg" cols="37">{pass_msg}</textarea></b></td>
+</tr>
+<tr>
+<td width="14%" bgcolor="#FFFFFF" align="right">Isi Email kepada member yang 
+diaktifkan : </td>
+<td width="30%" bgcolor="#FFFFFF">&nbsp;<b><textarea rows="10" name="active_msg" cols="37">{active_msg}</textarea></b></td>
+</tr>
+<tr>
+<td width="14%" bgcolor="#FFFFFF" align="right">Isi Email &quot;Hapus Member&quot; :</td>
+<td width="30%" bgcolor="#FFFFFF"><b>&nbsp;<textarea rows="10" name="del_msg" cols="37">{del_msg}</textarea></b></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td width="100%">&nbsp;<p align="right">
+<input type="submit" value="Simpan Konfigurasi !" name="button"></td>
+</tr>
+</table>
+</center>
+</div>
+<input type="hidden" name="doing" value="letter">
+</form>
+<p align="right">&nbsp;</p>

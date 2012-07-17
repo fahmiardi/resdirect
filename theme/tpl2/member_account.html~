@@ -1,0 +1,103 @@
+
+<p align="center"><b>Account</b></p>
+<p align="left">Silahkan update data-data anda di sini :</p>
+
+<div align="center">
+<center>
+<form method="POST" action="profile.php">
+<table border="0" width="99%">
+<tr>
+<td width="100%">
+<table border="0" cellpadding="2" width="100%" style="border: 1px solid #000080; ; border-collapse:collapse" class="tableline" bordercolor="#111111" cellspacing="0">
+<tr>
+<td width="100%" bgcolor="#FFFFFF">
+<table border="0" width="100%">
+<tr>
+<td width="80%" colspan="2" align="right">
+<p align="center"><b>
+Data {name} :</b></td>
+</tr>
+<tr>
+<td width="12%" bgcolor="#FFFFFF" align="right">UserID :</td>
+<td width="32%" bgcolor="#FFFFFF">&nbsp;{userid}</td>
+</tr>
+<tr>
+<td width="12%" bgcolor="#FFFFFF" align="right">Join Tanggal :</td>
+<td width="32%" bgcolor="#FFFFFF">&nbsp;{joindate} , Status : <b> 
+<font color="#0000FF">{status}</font></b></td>
+</tr>
+<tr>
+<td width="12%" bgcolor="#FFFFFF" align="right">Nama Lengkap :</td>
+<td width="32%" bgcolor="#FFFFFF">&nbsp;<input type="text" name="memname" size="37" value="{name}"></td>
+</tr>
+<tr>
+<td width="12%" bgcolor="#FFFFFF" align="right">Alamat :</td>
+<td width="32%" bgcolor="#FFFFFF"><b>&nbsp;</b><textarea rows="3" name="address" cols="41">{address}</textarea></td>
+</tr>
+<tr>
+<td width="12%" bgcolor="#FFFFFF" align="right">No. Telp/HP :</td>
+<td width="32%" bgcolor="#FFFFFF">&nbsp;<input type="text" name="phone" size="37" value="{phone}"></td>
+</tr>
+<tr>
+<td width="12%" bgcolor="#FFFFFF" align="right">Email :</td>
+<td width="32%" bgcolor="#FFFFFF">&nbsp;<input type="text" name="email" size="37" value="{email}"></td>
+</tr>
+<tr>
+<td width="12%" bgcolor="#FFFFFF" align="right">Bank/No. Rek:</td>
+<td width="32%" bgcolor="#FFFFFF">&nbsp;<b><textarea rows="5" name="bank" cols="32">{bank}</textarea></b></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td width="100%">&nbsp;<p align="right"><input type="submit" value="Simpan Account !" name="button"></td>
+</tr>
+</table>
+<input type="hidden" name="action" value="changeProfile">
+<input type="hidden" name="userid" value="{userid}">
+</form>
+</center>
+<center>
+<form method="POST">
+<table border="0" width="99%">
+<tr>
+<td width="100%">
+<table border="0" cellpadding="2" width="100%" style="border: 1px solid #000080; ; border-collapse:collapse" class="tableline" bordercolor="#111111" cellspacing="0">
+<tr>
+<td width="100%" bgcolor="#FFFFFF">
+<table border="0" width="100%">
+<tr>
+<td width="80%" colspan="2" align="right">
+<p align="center"><b>
+Ubah Password</b></td>
+</tr>
+<tr>
+<td width="12%" bgcolor="#FFFFFF" align="right">Password Lama:</td>
+<td width="32%" bgcolor="#FFFFFF">&nbsp;<input type="password" name="passwordLama" size="37"></td>
+</tr>
+<tr>
+<td width="12%" bgcolor="#FFFFFF" align="right">Password Baru:</td>
+<td width="32%" bgcolor="#FFFFFF">&nbsp;<input type="password" name="passwordBaru" size="37"></td>
+</tr>
+<tr>
+<td width="12%" bgcolor="#FFFFFF" align="right">Ulangi Password Baru:</td>
+<td width="32%" bgcolor="#FFFFFF">&nbsp;<input type="password" name="ulangiPasswordBaru" size="37"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td width="100%">&nbsp;<p align="right"><input type="submit" value="Ubah Password !" name="button"></td>
+</tr>
+</table>
+<input type="hidden" name="action" value="changePassword">
+<input type="hidden" name="userid" value="{userid}">
+</form>
+</center>
+</div>

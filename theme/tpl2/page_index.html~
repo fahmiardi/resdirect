@@ -1,0 +1,178 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>{title}</title>
+	<link rel="stylesheet" type="text/css" href="images/style.css">
+</head>
+<script language="javascript"><!--
+dr = ""+escape(document.referrer);
+dt = new Date();
+rnd = dt.valueOf().toString().substring(7,20);
+document.write("<img src=\"http://localhost/avt/member/track.php?tr=4&dr="+dr+"&"+rnd+"\" width=\"1\"  height=\"1\">");
+//-->\n</script>
+
+
+<body leftmargin=0 topmargin=0 marginheight="0" marginwidth="0" bgcolor="#E6E6E6">
+
+<table border="0" cellpadding="0" cellspacing="0" width="760" align="center" height="89">
+<tr valign="top">
+	<td height="89" valign="bottom" width="4" rowspan="3">&nbsp;
+</td>
+	<td height="1" valign="middle" width="752">
+    </td>
+	<td height="89" valign="bottom" width="1" bgcolor="#808080" rowspan="3">
+<img src="images/px1.gif" width="1" height="1" alt="" border="0"></td>
+</tr>
+  <tr valign="top"> 
+    <td height="171" valign="middle" width="752" style="background-image:url(images/header-background.jpg);background-repeat:no-repeat; background-position:right; background-color:#ffffff;"> 
+	<div><img src="images/beruntung.png" width="445" height="74"></div>
+    </td>
+</tr>
+<tr valign="top">
+	<td height="15" valign="middle" width="752" background="images/fon_top01.gif">
+<div align="right">
+<table border="0" cellpadding="0" cellspacing="0" width="570" height="32" style="border-collapse: collapse" bordercolor="#111111">
+<tr>
+	<td height="1" width="582">
+<table border="0" cellpadding="0" cellspacing="0" width="564" background="" style="border-collapse: collapse" bordercolor="#111111">
+<tr>
+	<td width="119"><p class="menu01" align="right">
+    <a href="index.php?id={direct_sponsor}">
+    <img src="images/e01.gif" width="8" height="7" alt="" border="0">&nbsp;&nbsp;Home</a></p></td>
+	<td width="107"><p class="menu01" align="right">
+    <a href="system.php?id={direct_sponsor}">
+    <img src="images/e01.gif" width="8" height="7" alt="" border="0">&nbsp;&nbsp;System</a></p></td>
+	<td width="103"><p class="menu01" align="right">
+    <a href="products.php?id={direct_sponsor}">
+    <img src="images/e01.gif" width="8" height="7" alt="" border="0">&nbsp;&nbsp;Products</a></p></td>
+	<td width="117"><p class="menu01" align="center">
+    <a href="join.php?id={direct_sponsor}">
+    <img src="images/e01.gif" width="8" height="7" alt="" border="0"></a><a href="testimonials.php?id={direct_sponsor}">&nbsp;&nbsp;</a><a href="join.php?id={direct_sponsor}">Join</a></p></td>
+	<td width="118"><p class="menu01" align="right">
+    <a href="testimonials.php?id={direct_sponsor}">
+    <img src="images/e01.gif" width="8" height="7" alt="" border="0"></a><a href="support.php?id={direct_sponsor}">&nbsp;</a><a href="testimonials.php?id={direct_sponsor}">Testimonials</a></p></td>
+</tr>
+</table>
+	</td>
+</tr>
+</table>    
+</div>
+    </td>
+</tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="758" align="center" height="358">
+<tr valign="top">
+	<td width="185" background="images/fon_left03.gif" height="358" rowspan="2">
+<table border="0" cellpadding="0" cellspacing="0" background="images/fon_left01.gif" width="100%">
+<tr>
+	<td align="right">
+<img src="images/m_top.gif" width="179" height="8" alt="" border="0"><table border="0" cellpadding="0" cellspacing="0" width="165" background="images/fon_left02.gif">
+<tr>
+	<td background="images/left01.gif" height="26"><p class="title">MENU :</p></td>
+</tr>
+<tr>
+	<td>
+<p class="b01"><img src="images/e02.gif" width="6" height="5" alt="" border="0" align="absmiddle">&nbsp;&nbsp;<a href="index.php?id={direct_sponsor}">Home</a></p>
+<div align="center"><img src="images/hr01.gif" width="137" height="3" alt="" border="0"></div>
+<p class="b01"><img src="images/e02.gif" width="6" height="5" alt="" border="0" align="absmiddle">&nbsp;&nbsp;<a href="system.php?id={direct_sponsor}">System</a></p>
+<div align="center"><img src="images/hr01.gif" width="137" height="3" alt="" border="0"></div>
+<p class="b01"><img src="images/e02.gif" width="6" height="5" alt="" border="0" align="absmiddle">&nbsp;&nbsp;<a href="products.php?id={direct_sponsor}">Products</a></p>
+<div align="center"><img src="images/hr01.gif" width="137" height="3" alt="" border="0"></div>
+<p class="b01"><img src="images/e02.gif" width="6" height="5" alt="" border="0" align="absmiddle">&nbsp;&nbsp;<a href="faq.php?id={direct_sponsor}">FAQ</a></p>
+<div align="center"><img src="images/hr01.gif" width="137" height="3" alt="" border="0"></div>
+<p class="b01"><img src="images/e02.gif" width="6" height="5" alt="" border="0" align="absmiddle">&nbsp;&nbsp;<a href="join.php?id={direct_sponsor}">Join</a></p>
+<div align="center"><img src="images/hr01.gif" width="137" height="3" alt="" border="0"></div>
+<p class="b01"><img src="images/e02.gif" width="6" height="5" alt="" border="0" align="absmiddle">&nbsp;&nbsp;<a href="testimonials.php?id={direct_sponsor}">Testimonials</a></p>
+<div align="center"><img src="images/hr01.gif" width="137" height="3" alt="" border="0"></div>
+<p class="b01"><img src="images/e02.gif" width="6" height="5" alt="" border="0" align="absmiddle">&nbsp;<a href="support.php?id={direct_sponsor}">&nbsp;Support</a></p>
+<div align="center"><img src="images/hr01.gif" width="137" height="3" alt="" border="0"></div>
+<p class="b01"><img src="images/e02.gif" width="6" height="5" alt="" border="0" align="absmiddle">&nbsp;&nbsp;<a href="login.php">Login</a></p>
+<div align="center"><img src="images/hr01.gif" width="137" height="3" alt="" border="0"></div>
+<div align="center">&nbsp;</div>
+	</td>
+</tr>
+<tr>
+	<td><img src="images/left_bot02.gif" width="165" height="18" alt="" border="0"></td>
+</tr>
+</table>	
+<br>
+<table border="0" cellpadding="0" cellspacing="0" width="165" background="images/fon_left02.gif" height="166">
+<tr>
+	<td background="images/left02.gif" height="26"><p class="title">MEMBER LOGIN 
+	:</p></td>
+</tr>
+<tr>
+	<td height="122">
+<form action="members/index.php" method="POST">
+<div align="center"><br>
+<input type="hidden" name="actions" value="login">
+<input name="uname" size="13"><br>
+<input type="password" name="pass" size="13"><br>
+  <br>
+<input type="image" src="images/b_login.gif" width="79" height="20" alt="" border="0" align="absbottom" name="I1"></div>
+<p class="px5">
+<div align="center">
+  &nbsp;</div>
+<p class="px5">
+<p class="b01"><img src="images/e02.gif" width="6" height="5" alt="" border="0" align="absmiddle">&nbsp;&nbsp;<a href="members/password.php">Lupa 
+password</a></p>
+	</td>
+</tr>
+</form>
+<tr>
+	<td height="18"><img src="images/left_bot02.gif" width="165" height="18" alt="" border="0"></td>
+</tr>
+</table>	
+	<p>&nbsp;</p>
+<table border="0" cellpadding="0" cellspacing="0" width="165" background="images/fon_left02.gif" height="166">
+<tr>
+	<td background="images/left02.gif" height="26"><p class="title">WEBSITE 
+    STATS 
+    :</p></td>
+</tr>
+<tr>
+	<td height="122">
+<p class="px5">
+<p class="b01">&nbsp;
+</p>
+	<p class="b01" align="left">Launch Date :<br>
+    {launch_date}</p>
+<p class="b01"><br>
+Member :<br>
+Total : {total_member}<br>
+Paid : {paid_member}<br>
+Free : {free_member}<br>
+&nbsp;</p>
+	</td>
+</tr>
+<tr>
+	<td height="18">
+    <img src="images/left_bot02.gif" width="165" height="18" alt="" border="0"></td>
+</tr>
+</table>	
+	</td>
+</tr>
+<tr>
+	<td><img src="images/left_bot01.gif" width="185" height="32" alt="" border="0"></td>
+</tr>
+</table>
+	</td>
+	<td bgcolor="#FFFFFF" width="572" height="513">
+<div align="center"><img src="images/m_top.gif" width="572" height="8" alt="" border="0"></div>
+<p class="px5">
+	{BODY}</td>
+	<td bgcolor="#979797" height="358" rowspan="2"><img src="images/px1.gif" width="1" height="1" alt="" border="0"></td>
+</tr>
+<tr>
+	<td bgcolor="#ffffff" width="572" height="1" style="border-bottom: 1px solid #808080; background-color:#ffffff; background-position:bottom; background-repeat:repeat-y;"></td>
+	</tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="758" align="center" height="43">
+<tr>
+	<td height="28"><p align="right" style="margin-right: 200px;">Copyright &copy; 2012 - {year_now} <a href="{program_url}"><span style="text-decoration: none">{program_name}</span></a></p></td>
+</tr>
+</table>
+
+</body>
+</html>

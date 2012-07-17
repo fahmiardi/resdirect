@@ -1,0 +1,40 @@
+<p align="center"><b>Admin Area :</b></p>
+<form method="POST">
+<p align="center">{msg}</p>
+<div align="center">
+<center>
+    <table border="0" width="90%">
+      <tr>
+<td width="100%">
+<table border="0" cellpadding="2" width="100%" style="border: 1px solid #000080; ; border-collapse:collapse" class="tableline" height="111" bordercolor="#111111" cellspacing="0">
+<tr>
+<td width="100%" bgcolor="#FFFFFF" height="65">
+<table border="0" width="100%" height="106">
+<tr>
+<td colspan="2" align="right" height="22">
+<p align="center"><b>
+Login :</b></td>
+</tr>
+<tr>
+<td width="36%" bgcolor="#FFFFFF" align="right" height="33">UserID :</td>
+<td width="64%" bgcolor="#FFFFFF" height="30">&nbsp; <input type="text" name="uname" size="37"></td>
+</tr>
+<tr>
+<td width="36%" bgcolor="#FFFFFF" align="right" height="42">Password :</td>
+<td width="64%" bgcolor="#FFFFFF" height="30">&nbsp; <input type="password" name="pass" size="37"></td>
+</tr>
+</table>
+</td>
+</tr>
+</center>
+<tr>
+<td width="100%" height="40">
+<p align="right"><input type="submit" value="Login !" name="button"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+</form>
+<p align="center">&nbsp;</p>

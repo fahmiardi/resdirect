@@ -1,0 +1,50 @@
+<?php
+    #***********************************************************************#
+    #                                                                       #
+    # "Script PHP untuk program affiliasi, reseller, mlm dan arisan online" #
+    #                   										            #
+    #                                                                       #
+    #***********************************************************************#
+    # File : upgrade.php
+    # Defenisi :
+    # Untuk menampilkan halaman upgrade
+
+    require("../config_inc.php");
+    require("../func_inc.php");
+    require("login_inc.php");
+
+    // Kalau status member sudah aktif :
+    if ($userlevel == 1) {
+        display_html("Keanggotaan anda sudah sebagai Paid Member", "msg.html");
+    }
+
+    // Ternyata member belum aktif (free member) :
+    else
+    {
+
+        //data member
+        $dbres = mysql_query("SELECT * FROM members WHERE userid='$userid'");
+        $member_row = mysql_fetch_array($dbres);
+        $direct_sponsor = $member_row['direct_sponsor'];
+        $random_sponsor = $member_row['random_sponsor'];
+        $userlevel = $member_row['userlevel'];
+        $status1 = $member_row['pay_direct'];
+        $status2 = $member_row['pay_random'];
+        $status3 = $member_row['pay_admin'];
+
+        $status_msg1 = ($status1 == 1?"Sudah aktivasi":"Belum aktivasi");
+        $status_msg2 = ($status2 == 1?"Sudah aktivasi":"Belum aktivasi");
+        $status_msg3 = ($status3 == 1?"Sudah aktivasi":"Belum aktivasi");
+
+
+        //mempersiapkan template untuk ditampilkan
+        $show_array = array(
+        'direct_status' => $status_msg1,
+            'random_status' => $status_msg2,
+            'admin_status' => $status_msg3 );
+
+        // Tampilkan halaman (template file : member_upgrade.html)
+        display_member_page("member_upgrade.html", $show_array);
+    }
+
+?>

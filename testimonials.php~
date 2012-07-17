@@ -1,0 +1,84 @@
+<?php
+    #***********************************************************************#
+    #                                                                       #
+    # "Script PHP untuk program affiliasi, reseller, mlm dan arisan online" #
+    #                   										            #
+    #                                                                       #
+    #***********************************************************************#
+    # File : testimonials.php
+    # Defenisi :
+    # Untuk menampilkan kesaksian-kesaksian member
+
+    require("config_inc.php");
+    require("func_inc.php");
+    include "sponsor_inc.php";
+
+    // Jumlah maksimum testimonials yang ditampilkan dalam 1 halaman (default 20)
+    $max_show = 20 ;
+
+    if(isset($_GET['page']) && $_GET['page'] !="") {
+	$page = (int)$_GET['page'];
+	if($page<=0) {
+		$page = 1;
+	}
+    }
+    else {
+	$page = 1;
+    }
+
+
+    $start_num = ($page-1) * $max_show ;
+    $end_num = $start_num + $max_show ;
+
+    // Perhitungan testimonials
+    $dbres = mysql_query("SELECT * FROM testimonials WHERE `active` = '1' ORDER BY date DESC");
+    $total = mysql_num_rows($dbres);
+
+
+    //********************** TESTIMONIALS ************************//
+    $n = 1 ;
+    $it = $start_num;
+    $testimonials = "";
+    $pagenum = "";
+    if ($total > 0) {
+        while ($row = mysql_fetch_array($dbres)) {
+            if ($n > $start_num and $n <= $end_num) {
+                $it++;
+                $testimonials .= "<tr>";
+                $testimonials .= "<td width=\"14%\" bgcolor=\"#FFFFFF\"><b>$row[name]</b><br>";
+                $testimonials .= "<a href=\"$row[url]\" target=\"_member\"><img border=\"0\" src=\"../images/hp.gif\" width=\"14\" height=\"14\"></a>";
+                $testimonials .= "&nbsp;<a href=\"mailto:$row[email]\"><img border=\"0\" src=\"../images/em.gif\" width=\"14\" height=\"14\"></a></td>";
+                $testimonials .= "<td width=\"56%\" bgcolor=\"#FFFFFF\">$row[content]</td>";
+                $testimonials .= "</tr>";
+
+            } else {
+                echo("") ;
+            }
+            $n = $n + 1 ;
+        }
+        // Menghitung jumlah halaman tampilan testimonials
+        $number_pages = 1 + $total / $max_show ;
+        $c = 1 ;
+        while ($c < $number_pages) {
+            $pagenum .= "[<a href=\"testimonials.php?page=$c\">Hal $c</a>]";
+            $c = $c + 1 ;
+        }
+    }
+    // Ternyata tidak ada testimonials
+    else
+    {
+        $testimonials = "Belum ada Testimonial";
+        $testi_pagenum = "";
+    }
+
+    // Tampilkan halaman :
+    $show_array = array(
+    'testimonials' => $testimonials,
+        'page' => $pagenum,
+        'direct_sponsor' => $direct_sponsor,
+        'random_sponsor' => $random_sponsor,
+        'title' => "Testimonials" );
+    // Tampilkan halaman (template file : page_testimonials.html)
+    display_home_page("page_testimonials.html", $show_array);
+
+?>

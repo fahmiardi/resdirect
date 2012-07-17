@@ -1,0 +1,5 @@
+<?php
+include "class.fasttemplate.php";
+$t = new FastTemplate();
+var_dump($t);
+?>

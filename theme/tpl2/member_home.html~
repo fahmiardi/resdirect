@@ -1,0 +1,27 @@
+<p align="center"><b>Selamat datang di Member Area {name}</b></p>
+<p align="left">Sebagai <b>Paid Member</b> dalam program ini, anda berhak 
+mendapatkan semua produk yang disediakan beserta bonusnya dan mengikuti Money 
+Making Program yang menghasilkan jutaan rupiah untuk anda. Silahkan download 
+semua produk yang disediakan di halaman <a href="products.php">products</a> .</p>
+<p align="left">{program_name} ini juga memberikan kesempatan kepada anda untuk menghasilkan keuntungan jutaan rupiah melalui Money Making Programnya. Anda berkesempatan mendapatkan pendapatan antara 
+<font color="#FF0000">Rp.25000,-</font> sampai 
+<font color="#FF0000">Rp.50000,-</font> untuk setiap member baru yang melakukan pendaftaran dan melakukan upgrade sebagai <b>Paid Member</b>.&nbsp;</p>
+<p align="left">Jika anda masih dalam tahap <b>Free Member</b>, silahkan upgrade segera keanggotaan anda di halaman
+<a href="upgrade.php">Upgrade</a>. Karena sistem kita hanya mengambil <b>Paid Member</b> saja untuk dijadikan <b>Direct Sponsor</b> dan <b>Random
+Sponsor</b> kepada setiap pengunjung/pembeli di website ini.</p>
+<p align="left"><b><i>Sistem Randomizer</i></b> yang kita gunakan akan bekerja secara otomatis untuk anda selama 24 jam penuh membantu anda menghasilkan keuntungan yang tiada batasnya. Sistem ini bahkan sanggup memberikan anda keuntungan walaupun tanpa
+melakukan promosi dan mencari pembeli/downline. Tetapi tentu saja untuk hasil yang lebih maksimal diperlukan sebuah upaya yang lebih lagi.</p>
+<p align="left">Sebuah website duplikasi (sama persis dengan website ini) telah dipersiapkan untuk anda sebagai alat untuk melakukan promosi.&nbsp;</p>
+<p align="left">Alamat Url nya adalah : <a href="{program_url}/index.php?id={userid}" target="_blank">{program_url}/index.php?id={userid}</a></p>
+<p align="left">Website ini akan aktif secara otomatis setelah keanggotaan anda telah diaktivasi sebagai <b>Paid Member</b>. Jika anda masih dalam tahap <b>Free Member</b>, jangan publikasikan alamat Url ini, karena sistem kita tetap saja akan mengambil <b>
+<font color="#0000FF">Paid Member sebagai Sponsor</font></b>.</p>
+<p align="left">Silahkan menggunakan semua fasilitas yang ada untuk membantu anda menghasilkan penghasilan yang tiada batasnya... Hasilkan keuntungan kapan saja dan dari mana saja...</p>
+<p align="left">Akhir kata, saya ucapkan Selamat Berjuang , dan Sukses Selalu !!</p>
+<h4 align="center">
+<font color="#FF0000">Start Making Money Online NOW.....!!!</font></h4>
+<p align="center">&nbsp;</p>
+<p align="left">Hormat saya,</p>
+<p align="left">&nbsp;</p>
+<p align="left">{admin_name}<br>
+Email :{admin_email}<br>
+Phone : {admin_phone}</p>

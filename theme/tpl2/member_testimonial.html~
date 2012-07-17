@@ -1,0 +1,57 @@
+<p align="center" style="text-indent: 20; line-height: 150%; margin-left: 10; margin-right: 10">
+<b>Testimonials</b></p>
+<p align="left" style="text-indent: 20; line-height: 150%; margin-left: 10; margin-right: 10">Untuk mendapatkan <b>MEGA BONUS</b> , Kami sangat mengharapkan Testimonial dari anda tentang {program_name} ini. Silahkan isi Form Testimonial di bawah. Isilah dengan
+kata-kata yang baik dan menarik untuk meningkatkan keberhasilan kita bersama. Testimonial anda ini akan ditampilkan di halaman website kita. Setelah mengirimkan testimonial, halaman bonus akan ditampilkan.</p>
+<form method="POST">
+<div align="center">
+<center>
+<table border="0" width="98%" class="tablelinered">
+<tr>
+<td width="100%">
+<table border="0" cellpadding="2" width="100%" style="border: 1px solid #000080;; border-collapse:collapse" class="tableline" bordercolor="#111111" cellspacing="0">
+<tr>
+<td width="100%" bgcolor="#FFFFFF">
+<table border="0" width="100%" height="243">
+<tr>
+<td width="100%" height="31">
+<p align="center"><b>
+Form Testimonial</b></td>
+</tr>
+<tr>
+<td width="100%" bgcolor="#FFFFFF" height="204">
+<table border="0" width="101%" cellspacing="1" cellpadding="0">
+<tr>
+<td width="20%" align="right">Nama</td>
+<td width="4%">:&nbsp;</td>
+<td width="78%"><input type="text" name="memname" size="35" value="{name}"></td>
+</tr>
+<tr>
+<td width="20%" align="right">Email</td>
+<td width="4%">:&nbsp;</td>
+<td width="78%"><input type="text" name="email" size="35" value="{email}"></td>
+</tr>
+<tr>
+<td width="20%" align="right">Homepage</td>
+<td width="4%">:&nbsp;</td>
+<td width="78%"><input type="text" name="url" size="48" value="http://">(optional)</td>
+</tr>
+<tr>
+<td width="20%" align="right" valign="top">Komentar</td>
+<td width="4%" valign="top">:&nbsp;</td>
+<td width="78%" valign="top"><textarea rows="8" name="content" cols="48"></textarea></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</center>
+</div>
+<p align="right" style="text-indent: 20; line-height: 150%; margin-left: 10; margin-right: 10"><input type="submit" value="Kirimkan Testimonial!" name="button"></p>
+<input type="hidden" name="userid" value="{userid}">
+</form>

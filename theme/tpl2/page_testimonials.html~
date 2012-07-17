@@ -1,0 +1,15 @@
+
+<p align="center"><b>Testimonials</b></p>
+<p align="left">Halaman ini berisi tentang kesaksian member{program_name} :</p>
+      <div align="center">
+        <center>
+      <table cellPadding="4" width="95%" border="1" style="border-collapse: collapse" bordercolor="#808080" cellspacing="0" height="16" class="b01">
+        <tr>
+          <td width="14%" bgcolor="#C0C0C0" align="center" height="8"><b>Nama</b></td>
+          <td width="56%" bgcolor="#C0C0C0" align="center" height="8"><b>Komentar</b></td>
+        </tr>{testimonials}
+      </table>
+        </center>
+</div>
+<p align="center">Ke Halaman : {page} </p>
+<p align="center">&nbsp;</p>

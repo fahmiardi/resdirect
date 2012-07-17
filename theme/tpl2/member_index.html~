@@ -1,0 +1,157 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>:: Member Control Panel ::</title>
+	<link rel="stylesheet" type="text/css" href="../images/style.css">
+</head>
+
+<body leftmargin=0 topmargin=0 marginheight="0" marginwidth="0" bgcolor="#E6E6E6">
+
+<table border="0" cellpadding="0" cellspacing="0" width="760" align="center" height="89">
+<tr valign="top">
+	<td height="89" valign="bottom" width="4" rowspan="3">&nbsp;
+</td>
+	<td height="1" valign="middle" width="752">
+    </td>
+	<td height="89" valign="bottom" width="1" bgcolor="#808080" rowspan="3">
+<img src="../images/px1.gif" width="1" height="1" alt="" border="0"></td>
+</tr>
+<tr valign="top">
+	<td height="112" valign="middle" width="752" background="../images/main01.jpg">
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber1" height="79">
+  <tr>
+    <td width="25%" height="79">&nbsp;</td>
+    <td width="75%" height="79">
+    <h1 align="center"><b><font color="#FFFFFF">{program_name}</font></b></h1>
+    <h3 align="center"><font color="#FFFFFF">{program_url}</font></h3>
+    </td>
+  </tr>
+</table>
+    </td>
+</tr>
+<tr valign="top">
+	<td height="15" valign="middle" width="752" background="../images/fon_top01.gif">
+<div align="right">
+<table border="0" cellpadding="0" cellspacing="0" width="570" height="32" style="border-collapse: collapse" bordercolor="#111111">
+<tr>
+	<td height="1" width="582">
+<table border="0" cellpadding="0" cellspacing="0" width="564" background="" style="border-collapse: collapse" bordercolor="#111111">
+<tr>
+	<td width="119"><p class="menu01" align="right">
+    <a href="index.php">
+    <img src="../images/e01.gif" width="8" height="7" alt="" border="0">&nbsp;&nbsp;Home</a></p></td>
+	<td width="107"><p class="menu01" align="right">
+    <a href="products.php">
+    <img src="../images/e01.gif" width="8" height="7" alt="" border="0">&nbsp;&nbsp;Products</a></p></td>
+	<td width="103"><p class="menu01" align="right">
+    <a href="bonus.php">
+    <img src="../images/e01.gif" width="8" height="7" alt="" border="0">&nbsp;&nbsp;Bonus</a></p></td>
+	<td width="103"><p class="menu01" align="center">
+    <img src="../images/e01.gif" width="8" height="7" alt="" border="0">&nbsp;&nbsp;</a><a href="referral.php">Downline</a></p></td>
+	<td width="68"><p class="menu01" align="right">
+    <img src="../images/e01.gif" width="8" height="7" alt="" border="0">&nbsp;</a><a href="profile.php">Profile</a></p></td>
+	<td width="64"><p class="menu01" align="right">
+	<img src="../images/e01.gif" width="8" height="7" alt="" border="0">&nbsp;</a><a href="logout.php">Logout</a></p></td>
+</tr>
+</table>
+	</td>
+</tr>
+</table>    
+</div>
+    </td>
+</tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="758" align="center" height="358">
+<tr valign="top">
+	<td width="185" background="../images/fon_left03.gif" height="358" rowspan="2">
+<table border="0" cellpadding="0" cellspacing="0" background="../images/fon_left01.gif" width="100%">
+<tr>
+	<td align="right">
+<img src="../images/m_top.gif" width="179" height="8" alt="" border="0"><table border="0" cellpadding="0" cellspacing="0" width="165" background="../images/fon_left02.gif">
+<tr>
+	<td background="../images/left01.gif" height="26"><p class="title">MENU :</p></td>
+</tr>
+<tr>
+	<td>
+<p class="b01"><img src="../images/e02.gif" width="6" height="5" alt="" border="0" align="absmiddle">&nbsp;&nbsp;<a href="index.php">Home</a></p>
+<div align="center"><img src="../images/hr01.gif" width="137" height="3" alt="" border="0"></div>
+<p class="b01"><img src="../images/e02.gif" width="6" height="5" alt="" border="0" align="absmiddle">&nbsp;&nbsp;<a href="products.php">Products</a></p>
+<div align="center"><img src="../images/hr01.gif" width="137" height="3" alt="" border="0"></div>
+<p class="b01"><img src="../images/e02.gif" width="6" height="5" alt="" border="0" align="absmiddle">&nbsp;&nbsp;<a href="bonus.php">Bonus</a></p>
+<div align="center"><img src="../images/hr01.gif" width="137" height="3" alt="" border="0"></div>
+<p class="b01"><img src="../images/e02.gif" width="6" height="5" alt="" border="0" align="absmiddle">&nbsp;&nbsp;<a href="referral.php">Downline</a></p>
+<div align="center"><img src="../images/hr01.gif" width="137" height="3" alt="" border="0"></div>
+<p class="b01"><img src="../images/e02.gif" width="6" height="5" alt="" border="0" align="absmiddle">&nbsp;&nbsp;<a href="profile.php">Profile</a></p>
+<div align="center"><img src="../images/hr01.gif" width="137" height="3" alt="" border="0"></div>
+<p class="b01"><img src="../images/e02.gif" width="6" height="5" alt="" border="0" align="absmiddle">&nbsp;&nbsp;<a href="stats.php">Stats</a></p>
+<div align="center"><img src="../images/hr01.gif" width="137" height="3" alt="" border="0"></div>
+<p class="b01"><img src="../images/e02.gif" width="6" height="5" alt="" border="0" align="absmiddle">&nbsp;<a href="upgrade.php">&nbsp;Upgrade</a></p>
+<div align="center"><img src="../images/hr01.gif" width="137" height="3" alt="" border="0"></div>
+<p class="b01"><img src="../images/e02.gif" width="6" height="5" alt="" border="0" align="absmiddle">&nbsp;&nbsp;<a href="faq.php">FAQ</a></p>
+<div align="center"><img src="../images/hr01.gif" width="137" height="3" alt="" border="0"></div>
+<div align="center">
+<p class="b01" align="left"><img src="../images/e02.gif" width="6" height="5" alt="" border="0" align="absmiddle">&nbsp;&nbsp;<a href="logout.php">Logout</a></p>
+<div align="center"><img src="../images/hr01.gif" width="137" height="3" alt="" border="0"></div>
+&nbsp;</div>
+	</td>
+</tr>
+<tr>
+	<td><img src="../images/left_bot02.gif" width="165" height="18" alt="" border="0"></td>
+</tr>
+</table>	
+<br>
+<table border="0" cellpadding="0" cellspacing="0" width="165" background="../images/fon_left02.gif" height="166">
+<tr>
+	<td background="../images/left02.gif" height="26"><p class="title">WEBSITE 
+    STATS 
+    :</p></td>
+</tr>
+<tr>
+	<td height="122">
+
+<p class="px5">
+<p class="b01">&nbsp;
+</p>
+	<p class="b01" align="left">Launch Date :<br>
+    {launch_date}</p>
+<p class="b01"><br>
+Member :<br>
+Total : {total_member}<br>
+Paid : {paid_member}<br>
+Free : {free_member}<br>
+&nbsp;</p>
+	</td>
+</tr>
+<tr>
+	<td height="18">
+    <img src="../images/left_bot02.gif" width="165" height="18" alt="" border="0"></td>
+</tr>
+</table>	
+	</td>
+</tr>
+<tr>
+	<td><img src="../images/left_bot01.gif" width="185" height="32" alt="" border="0"></td>
+</tr>
+</table>
+	</td>
+	<td bgcolor="#FFFFFF" width="572" height="513">
+<div align="center"><img src="../images/m_top.gif" width="572" height="8" alt="" border="0"></div>
+<p class="px5">
+	{BODY}</td>
+	<td bgcolor="#979797" height="358" rowspan="2"><img src="../images/px1.gif" width="1" height="1" alt="" border="0"></td>
+</tr>
+<tr>
+	<td bgcolor="#808080" width="572" height="1">
+<img src="../images/px1.gif" width="1" height="1" alt="" border="0"></td>
+	</tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="758" align="center" height="43">
+<tr>
+	<td height="28"><p align="right" style="margin-right: 200px;">Copyright &copy;2009 <a href="{program_url}">{program_name}</a>
+      </p></td>
+</tr>
+</table>
+
+</body>
+</html>

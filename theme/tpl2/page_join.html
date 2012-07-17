@@ -1,0 +1,87 @@
+<p style="text-indent: 15px; margin-left: 10px; margin-right: 10px" align="center">
+<b>Join</b></p>
+<p align="left">Prosedur Pendaftaran :</p>
+<ol>
+  <li>
+  <p align="left">Mengisi Formulir pendaftaran di bawah ini. </li>
+  <li>
+  <p align="left">Script secara otomatis akan mengirimkan 
+  email berisi 3 nomor rekening yang akan ditransfer biaya pendaftarannya.
+  </li>
+  <li>
+  <p align="left">Membayar langsung kepada Direct Sponsor:<br>
+  Nama : <b>{direct_sponsor_name}</b> , sebesar <b><font color="#ff0000">
+  Rp.{direct_sponsor_amount}</font></b> </li>
+  <li>
+  <p align="left">Membayar langsung kepada Random Sponsor :<br>
+  Nama : <b>{random_sponsor_name}</b> , sebesar <b><font color="#ff0000">
+  Rp.{random_sponsor_amount}</font></b> </li>
+  <li>
+  <p align="left">Melakukan pembayaran kepada <b>Pengelola/Admin</b> sebesar <b>
+  <font color="#ff0000">Rp.{admin_amount}</font></b> </li>
+  <li>
+  <p align="left">Konfirmasikan pembayaran anda dari member area. </li>
+  <li>
+  <p align="left">Dan tunggu aktivasi dari Sponsor dan Admin.</li>
+</ol>
+<form method="POST" action="join.php">
+  <div align="center">
+    <center>
+    <table class="tableline" style="border-collapse: collapse; border: 1px solid #000080; " borderColor="#111111" cellSpacing="0" cellPadding="2" width="80%" border="0">
+      <tr>
+        <td width="100%" bgColor="#FFFFFF">
+        <table cellPadding="4" width="100%" border="0" style="border-collapse: collapse" bordercolor="#111111" cellspacing="0">
+          <tr>
+            <td width="70%" colSpan="2">
+            <p align="center"><b>Formulir Pendaftaran</b></td>
+          </tr>
+          <tr>
+            <td width="18%" bgColor="#ffffff">
+            <p align="right"><b>UserId :</b></td>
+            <td width="52%" bgColor="#ffffff"><input size="41" name="userid"><font color="#ff0000">*</font></td>
+          </tr>
+          <tr>
+            <td width="18%" bgColor="#ffffff">
+            <p align="right"><b>Password :<br>
+            Ulangi :</b></td>
+            <td width="52%" bgColor="#ffffff">
+            <input type="password" size="41" value name="password1"><font color="#ff0000">*</font><br>
+            <input type="password" size="41" value name="password2"><font color="#ff0000">*</font></td>
+          </tr>
+          <tr>
+            <td width="18%" bgColor="#ffffff">
+            <p align="right"><b>Email :<br>
+            Ulangi :</b></td>
+            <td width="52%" bgColor="#ffffff"><input size="41" name="email1">
+            <font color="#ff0000">*</font><br>
+            <input size="41" name="email2"> <font color="#ff0000">*</font></td>
+          </tr>
+          <tr>
+            <td width="18%" bgColor="#ffffff">
+            <p align="right"><b>Nama :</b></td>
+            <td width="52%" bgColor="#ffffff"><input size="41" name="name"><font color="#ff0000">*</font></td>
+          </tr>
+          <tr>
+            <td width="18%" bgColor="#ffffff">
+            <p align="right"><b>No. Telp/HP :</b></td>
+            <td width="52%" bgColor="#ffffff"><input size="41" name="phone"><font color="#ff0000">*</font></td>
+          </tr>
+          <tr>
+            <td width="70%" bgColor="#ffffff" colSpan="2"><font color="#ff0000">
+            *</font>.Wajib diisi
+            <p><input type="checkbox" value="ON" name="cek">Saya sudah mengerti 
+            tentang hak dan kewajiban saya sebagai member, dan mengerti tentang 
+            peraturan program ini.</p>
+            <p align="center">
+            <input type="submit" value="Daftar Sekarang !" name="join"></td>
+            <input type="hidden" value="join" name="actions">
+            <input type="hidden" value="{direct_sponsor}" name="direct_sponsor">
+            <input type="hidden" value="{random_sponsor}" name="random_sponsor">
+          </tr>
+        </table>
+        </td>
+      </tr>
+    </table>
+    </center>
+  </div>
+</form>

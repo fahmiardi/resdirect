@@ -1,0 +1,56 @@
+<p align="center" style="text-indent: 20; line-height: 150%; margin-left: 10; margin-right: 10">
+<b>Admin Control Panel</b></p>
+<form method="POST" action="members.php">
+      <p><b>Cari member : </b>&nbsp;<input type="text" name="query" size="20">
+      <input type="submit" value="Cari" name="B1"></p>
+      <input type="hidden" name="actions" value="cariAdmin">    
+</form></p>
+<p align="left" style="line-height: 150%; ">
+Untuk menghapus member yang belum upgrade selama 14 hari silahkan klik
+<a href="delete.php">di sini...</a></p>
+<p align="left" style="line-height: 150%; ">
+<b>Member anda :<br>
+</b>[Total : 
+    <font color="#FF0000">{total_member}</font>] [Paid : 
+    <font color="#FF0000">{paid_member}</font>] [Free : 
+    <font color="#FF0000">{free_member}</font>] [ <a href="add_account.php">Buat member baru</a> 
+]<br>
+    </p>
+<div align="center">
+<center>
+
+
+
+
+<table border="1" width="95%" bordercolor="#808080" style="border-collapse: collapse" cellpadding="2" class="menu01">
+<tr>
+<td width="20" align="center" bgcolor="#C0C0C0"><b>
+No</b></td>
+<td width="218" align="center" bgcolor="#C0C0C0">
+<b>Account</b></td>
+<td width="204" align="center" bgcolor="#C0C0C0">
+<b>Contact</b></td>
+<td width="100" align="center" bgcolor="#C0C0C0">
+<b>Referral</b></td>
+<td width="47" align="center" bgcolor="#C0C0C0">
+<b>
+Stats</b></td>
+<td width="54" align="center" bgcolor="#C0C0C0">
+<b>Aktivasi</b></td>
+<td width="50" align="center" bgcolor="#C0C0C0">
+<b>Status</b></td>
+</tr>
+{all_members}
+</table>
+
+
+
+
+</center>
+</div>
+<p align="center">
+{page_num}&nbsp;</p>
+<p align="center">
+&nbsp;</p>
+<p align="center">
+&nbsp;</p>

@@ -1,0 +1,188 @@
+<?php
+    #***********************************************************************#
+    #                                                                       #
+    # "Script PHP untuk program affiliasi, reseller, mlm dan arisan online" #
+    #                							    #
+    #                                                                       #
+    #***********************************************************************#
+    # File : join.php
+    # Defenisi :
+    # Untuk menampilkan halaman pendaftaran
+
+    require("config_inc.php");
+    require("func_inc.php");
+    include "sponsor_inc.php";
+
+    $show_array = array(
+    'direct_sponsor' => $direct_sponsor,
+        'random_sponsor' => $random_sponsor,
+        'title' => "Join" // Judul halaman (ganti bila perlu) !
+    );
+    $error = "";
+
+    // Proses data member :
+    if (isset($_POST['actions']) && $_POST['actions']=="join") {
+	$userid = $_POST['userid'];	
+	$email1 = $_POST['email1'];
+	$email2 = $_POST['email2'];
+	$password1 = $_POST['password1'];
+	$password2 = $_POST['password2'];
+	$name = $_POST['name'];
+	$cek = $_POST['cek'];
+	$phone = $_POST['phone'];
+	$direct_sponsor = $_POST['direct_sponsor'];
+	$random_sponsor = $_POST['random_sponsor'];
+
+        $error = "";
+        if (!strlen($userid)) {
+             $error .= "<li>Mohon diisi UserId yang anda inginkan.</li>";
+        }
+        if (strlen($userid) < 5) {
+             $error .= "<li>Mohon diisi UserId lebih dari 5 huruf.</li>";
+        }
+        if (strlen($userid) > 12) {
+             $error .= "<li>Maksimum panjang UserId adalah 12 huruf.</li>";
+        }
+        if (preg_match('/%/', $userid) || preg_match('/ /', $userid)) {
+             $error .= "<li>UserId yang anda isikan tidak diterima/invalid.</li>";
+        }
+        if (!preg_match("/^[_\.0-9a-z-]+$/i", $userid)) {
+             $error .= "<li>UserId yang anda isikan tidak diterima/invalid.</li>";
+        }
+        if (read_member($userid)) {
+             $error .= "<li>UserId '$userid' sudah digunakan, Silahkan pilih yang lain.</li>";
+        }
+        if (!check_email($email1)) {
+             $error .= "<li>Mohon diisi email yang benar.</li>";
+        }
+
+        if ($email1 != $email2) {
+             $error .= "<li>Mohon diisi email yang sama.</li>";
+        }
+        if (!strlen($password1)) {
+             $error .= "<li>Mohon diisi password yang anda inginkan.</li>";
+        }
+        if ($password1 != $password2) {
+             $error .= "<li>Mohon diisi password yang sama.</li>";
+        }
+
+        if (!strlen($name)) {
+             $error .= "<li>Mohon diisi nama lengkap anda.</li>";
+        }
+        if (!$cek) {
+             $error .= "<li>Anda harus menyetujui kebijakan program ini</li>";
+        }
+        
+
+        $email = $email1;
+        $password = $password1;
+
+        //proses 3 angka unik untuk masing-masing biaya :
+        $unik = unik_number();
+
+        $dsponsor_amount = $conf['dsponsor_amount']+$unik;
+        $rsponsor_amount = $conf['rsponsor_amount']+$unik;
+        $admin_amount = $conf['admin_amount']+$unik;
+
+        //Masukin data member ke database members :
+        $dbq1 = "INSERT INTO members SET userid = '$userid', password = md5('$password'),email='$email',
+            name = '$name', phone = '$phone', direct_sponsor = '$direct_sponsor',
+            random_sponsor = '$random_sponsor', payment = '$unik', joindate = NOW()";
+        $res = mysql_query($dbq1, $dbcon);
+
+        //Lihat konfigurasi email dari database :
+        $letters_row = mysql_fetch_array(
+        mysql_query("SELECT * FROM letters", $dbcon))
+        or display_html(mysql_error(), "error.html");
+        $newuser_msg = $letters_row['newuser_msg'];
+        $direct_msg = $letters_row['dsponsor_msg'];
+        $random_msg = $letters_row['rsponsor_msg'];
+        $admin_msg = $letters_row['admin_msg'];
+        $user_title = $letters_row['user_title'];
+        $dsponsor_title = $letters_row['dsponsor_title'];
+        $rsponsor_title = $letters_row['rsponsor_title'];
+        $admin_title = $letters_row['admin_title'];
+
+        // Kirim email kepada user baru :
+        $msg = replace($newuser_msg);
+        sendmail($conf['admin_email'], $email, $user_title, $msg, '1');
+
+        // Kirim email kepada direct sponsor :
+        $msg = replace($direct_msg);
+        $dsponsor_row = mysql_fetch_array(mysql_query("SELECT email FROM members WHERE userid ='$direct_sponsor'", $dbcon));
+        sendmail($conf['admin_email'], $dsponsor_row['email'], $dsponsor_title, $msg, '1');
+
+        // Kirim email kepada random sponsor :
+        if ($conf['rsponsor'] == 1) {
+            $msg = replace($random_msg);
+            $rsponsor_row = mysql_fetch_array(mysql_query("SELECT email FROM members WHERE userid ='$random_sponsor'", $dbcon));
+            sendmail($conf['admin_email'], $rsponsor_row['email'], $rsponsor_title, $msg, '1');
+        }
+
+        // Kirim email kepada admin :
+        $msg = replace($admin_msg);
+        sendmail($conf['admin_email'], $conf['admin_email'], $admin_title, $msg, '1');
+
+        // Pendaftaran sukses, menampilkan halaman terima kasih
+        // Tampilkan halaman (template file : page_thanks.html)
+        display_home_page("page_thanks.html", $show_array);
+    }
+
+    // Tampilkan halaman (template file : page_join.html)
+    display_home_page("page_join.html", $show_array);
+
+    // Fungsi parse email :
+    function replace($str) {
+        global $dbcon, $conf, $userid, $dsponsor_amount, $rsponsor_amount, $admin_amount;
+        $msg = $str;
+
+        $member_row = mysql_fetch_array(
+        mysql_query("SELECT * FROM members WHERE userid = '$userid'", $dbcon))
+        or display_html(mysql_error(), "error.html");
+        $dsponsor = $member_row['direct_sponsor'];
+
+
+        $dsponsor_row = mysql_fetch_array(
+        mysql_query("SELECT name,userid,email,bank,phone FROM members WHERE userid ='$dsponsor'", $dbcon))
+        or display_html(mysql_error(), "error.html");
+
+
+        $msg = str_replace("{member_name}", $member_row['name'], $msg);
+        $msg = str_replace("{member_email}", $member_row['email'], $msg);
+        $msg = str_replace("{member_phone}", $member_row['phone'], $msg);
+        $msg = str_replace("{member_userid}", $member_row['userid'], $msg);
+        $msg = str_replace("{member_password}", $member_row['password'], $msg);
+
+        $msg = str_replace("{dsponsor_name}", $dsponsor_row['name'], $msg);
+        $msg = str_replace("{dsponsor_phone}", $dsponsor_row['phone'], $msg);
+        $msg = str_replace("{dsponsor_email}", $dsponsor_row['email'], $msg);
+        $msg = str_replace("{dsponsor_bank}", $dsponsor_row['bank'], $msg);
+        $msg = str_replace("{dsponsor_amount}", $dsponsor_amount, $msg);
+
+        if ($conf['rsponsor'] == 1) {
+            $rsponsor = $member_row['random_sponsor'];
+            $rsponsor_row = mysql_fetch_array(
+            mysql_query("SELECT name,userid,email,bank,phone FROM members WHERE userid ='$rsponsor'", $dbcon))
+            or display_html(mysql_error(), "error.html");
+            $msg = str_replace("{rsponsor_name}", $rsponsor_row['name'], $msg);
+            $msg = str_replace("{rsponsor_phone}", $rsponsor_row['phone'], $msg);
+            $msg = str_replace("{rsponsor_email}", $rsponsor_row['email'], $msg);
+            $msg = str_replace("{rsponsor_bank}", $rsponsor_row['bank'], $msg);
+            $msg = str_replace("{rsponsor_amount}", $rsponsor_amount, $msg);
+        }
+
+        $msg = str_replace("{admin_name}", $conf['admin_name'], $msg);
+        $msg = str_replace("{admin_phone}", $conf['admin_phone'], $msg);
+        $msg = str_replace("{admin_email}", $conf['admin_email'], $msg);
+        $msg = str_replace("{admin_bank}", $conf['admin_bank'], $msg);
+        $msg = str_replace("{admin_amount}", $admin_amount, $msg);
+
+        $msg = str_replace("{member_url}", $conf['member_url'], $msg);
+        $msg = str_replace("{program_name}", $conf['program_name'], $msg);
+        $msg = str_replace("{program_url}", $conf['program_url'], $msg);
+
+        return $msg;
+
+    }
+
+?>

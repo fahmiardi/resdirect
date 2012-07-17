@@ -1,0 +1,70 @@
+<p align="center" style="text-indent: 20; line-height: 150%; margin-left: 10; margin-right: 10">
+<b>Admin Account</b></p>
+<form method="POST">
+<div align="center">
+<center>
+<table border="0" width="95%" style="border-collapse: collapse" bordercolor="#111111" cellpadding="0" cellspacing="0">
+<tr>
+<td width="100%">
+<table border="0" cellpadding="2" width="100%" style="border: 1px solid #000080; ; border-collapse:collapse" class="tableline" bordercolor="#111111" cellspacing="0">
+<tr>
+<td width="100%" bgcolor="#FFFFFF">
+<table border="0" width="100%" height="334" class="b01" style="border-collapse: collapse" bordercolor="#111111" cellpadding="0" cellspacing="0">
+<tr>
+<td width="80%" colspan="2" align="right" height="19">
+<p align="center"><b>
+Data Admin ({admin_name}) :</b></td>
+</tr>
+<tr>
+<td width="12%" bgcolor="#FFFFFF" align="right" height="23">UserID :</td>
+<td width="32%" bgcolor="#FFFFFF" height="23">&nbsp;<input name="admin_userid" size="37" value="{admin_userid}"></td>
+</tr>
+<tr>
+<td width="12%" bgcolor="#FFFFFF" align="right" height="23">Password :</td>
+<td width="32%" bgcolor="#FFFFFF" height="23">&nbsp;<input type="password" name="admin_password" size="37" value="{admin_password}"></td>
+</tr>
+<tr>
+<td width="12%" bgcolor="#FFFFFF" align="right" height="19">IP Terakhir :</td>
+<td width="32%" bgcolor="#FFFFFF" height="19">&nbsp;{admin_lastip}</td>
+</tr>
+<tr>
+<td width="12%" bgcolor="#FFFFFF" align="right" height="23">Nama Lengkap :</td>
+<td width="32%" bgcolor="#FFFFFF" height="23">&nbsp;<input type="text" name="admin_name" size="37" value="{admin_name}"></td>
+</tr>
+<tr>
+<td width="12%" bgcolor="#FFFFFF" align="right" height="52">Alamat :</td>
+<td width="32%" bgcolor="#FFFFFF" height="52"><b>&nbsp;</b><textarea rows="3" name="admin_address" cols="41">{admin_address}</textarea></td>
+</tr>
+<tr>
+<td width="12%" bgcolor="#FFFFFF" align="right" height="23">No. Telp/HP :</td>
+<td width="32%" bgcolor="#FFFFFF" height="23">&nbsp;<input type="text" name="admin_phone" size="37" value="{admin_phone}"></td>
+</tr>
+<tr>
+<td width="12%" bgcolor="#FFFFFF" align="right" height="23">Email :</td>
+<td width="32%" bgcolor="#FFFFFF" height="23">&nbsp;<input type="text" name="admin_email" size="37" value="{admin_email}"></td>
+</tr>
+<tr>
+<td width="12%" bgcolor="#FFFFFF" align="right" height="93">Bank/No. Rek:</td>
+<td width="32%" bgcolor="#FFFFFF" height="93">&nbsp;<b><textarea rows="5" name="admin_bank" cols="41">{admin_bank}</textarea></b></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td width="100%">&nbsp;<p align="right"><input type="submit" value="Simpan Account !" name="button"></td>
+</tr>
+</table>
+</center>
+</div>
+<input type="hidden" name="act" value="save">
+<input type="hidden" name="level" value="admin">
+</form>
+<p>&nbsp;</p>
+<p>
+<b>
+<font size="1">
+    </font>
+    </b>

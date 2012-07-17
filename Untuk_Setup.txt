@@ -1,0 +1,10 @@
+Langkah-langkah Install Script
+1. Buatlah sebuah database melalui cpanel hosting website anda
+2. Buka file bernama config.inc.php dan ubah isinya sesuai dengan database yang anda buat tadi
+3. Upload semua file script ini  ke public_html hosting anda menggunakan cuteftp atau sejenisnya
+4. Lakukan Instalasi melalui browser dengan mengetik http://webanda.com/install.php
+5. Isikan data database yang anda buat tadi (Nama Database, User Database, Host dan Password)
+6. Masuk ke admin area website anda dengan menggunakan user id dan password yang telah anda buat atdi saat instalasi scripnya
+
+Selesai
+

@@ -1,0 +1,133 @@
+<p align="center" style="text-indent: 20; line-height: 150%; margin-left: 10; margin-right: 10">
+<b>Data Member</b></p>
+<form method="POST">
+<div align="center">
+  <center>
+<table border="0" cellpadding="2" width="95%" style="border: 1px solid #000080; ; border-collapse:collapse" class="tableline" bordercolor="#111111" cellspacing="0">
+<tr>
+<td width="100%" bgcolor="#FFFFFF">
+<table border="0" width="100%" class="menu01" style="border-collapse: collapse" bordercolor="#111111" cellpadding="2" height="566">
+<tr>
+<td width="80%" colspan="2" align="right" height="32">
+<p align="center"><b>
+Data {name} :<br>
+(Untuk menghapus keanggotaan {name},
+<a href="account.php?act=del&userid={userid}">klik di sini...</a>)</b></td>
+</tr>
+<tr>
+<td width="12%" bgcolor="#FFFFFF" align="right" height="19">UserID :</td>
+<td width="32%" bgcolor="#FFFFFF" height="19">&nbsp;<b>{userid}</b>&nbsp; ,Join Tanggal :{joindate} , Status : <b> 
+<font color="#0000FF">{status}</font></b></td>
+</tr>
+<tr>
+<td width="12%" bgcolor="#FFFFFF" align="right" height="23">Password :</td>
+<td width="32%" bgcolor="#FFFFFF" height="23">&nbsp;<input type="password" name="pass" size="37" value="{password}"></td>
+</tr>
+<tr>
+<td width="12%" bgcolor="#FFFFFF" align="right" height="5">Nama Lengkap :</td>
+<td width="32%" bgcolor="#FFFFFF" height="5">&nbsp;<input type="text" name="name" size="37" value="{name}"></td>
+</tr>
+<tr>
+<td width="12%" bgcolor="#FFFFFF" align="right" height="5">Email :</td>
+<td width="32%" bgcolor="#FFFFFF" height="5">&nbsp;<input type="text" name="email" size="37" value="{email}"></td>
+</tr>
+<tr>
+<td width="12%" bgcolor="#FFFFFF" align="right" height="5">Telepon :</td>
+<td width="32%" bgcolor="#FFFFFF" height="5">&nbsp;<input type="text" name="phone" size="37" value="{phone}"></td>
+</tr>
+<tr>
+<td width="12%" bgcolor="#FFFFFF" align="right" height="52">Alamat :</td>
+<td width="32%" bgcolor="#FFFFFF" height="2">&nbsp;<textarea rows="3" name="address" cols="41">{address}</textarea></td>
+</tr>
+<tr>
+<td width="12%" bgcolor="#FFFFFF" align="right" height="17">Bank :</td>
+<td width="32%" bgcolor="#FFFFFF" height="1">&nbsp;<b><textarea rows="5" name="bank" cols="32">{bank}</textarea></b></td>
+</tr>
+<tr>
+<td width="12%" bgcolor="#FFFFFF" align="right" height="17">Status Account :</td>
+<td width="32%" bgcolor="#FFFFFF" height="1"><b>&nbsp;</b><input type="text" name="userlevel" size="12" value="{userlevel}"> 
+(1=Aktif ; 0=NonAktif)</td>
+</tr>
+<tr>
+<td width="12%" bgcolor="#FFFFFF" align="right" height="17">Rotation :</td>
+<td width="32%" bgcolor="#FFFFFF" height="0"><b>&nbsp;</b><input type="text" name="rotation" size="12" value="{rotation}"> 
+(Max 10)</td>
+</tr>
+<tr>
+<td width="12%" bgcolor="#FFFFFF" align="right" height="17">Angka Unik 
+Pembayaran:</td>
+<td width="32%" bgcolor="#FFFFFF" height="0">
+<input type="text" name="payment" size="12" value="{payment}"> (3 angka)</td>
+</tr>
+<tr>
+<td width="12%" bgcolor="#FFFFFF" align="right" height="16">&nbsp;</td>
+<td width="32%" bgcolor="#FFFFFF" height="0">&nbsp;</td>
+</tr>
+<tr>
+<td width="12%" bgcolor="#FFFFFF" align="right" height="41">UserID sponsor :<br>
+&nbsp;</td>
+<td width="32%" bgcolor="#FFFFFF" height="41">
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="89%" class="menu01" height="40">
+  <tr>
+    <td width="50%" height="18">Direct : <font size="1">(<a href="account.php?userid={direct_sponsor_userid}">Lihat 
+    Account</a>)</font></td>
+    <td width="50%" height="18">Random :&nbsp;
+<font size="1">(<a href="account.php?userid={random_sponsor_userid}">Lihat 
+    Account</a>)</font></td>
+  </tr>
+  <tr>
+    <td width="50%" height="22">
+    <input type="text" name="direct_sponsor_userid" size="12" value="{direct_sponsor_userid}"></td>
+    <td width="50%" height="22">
+    <input type="text" name="random_sponsor_userid" size="12" value="{random_sponsor_userid}"></td>
+  </tr>
+</table>
+</td>
+</tr>
+<tr>
+<td width="12%" bgcolor="#FFFFFF" align="right" height="19">&nbsp;</td>
+<td width="32%" bgcolor="#FFFFFF" height="19">&nbsp;</td>
+</tr>
+<tr>
+<td width="12%" bgcolor="#FFFFFF" align="right" height="79">Status Aktivasi :<br>
+(1=Aktif ; 0=NonAktif)<br>
+&nbsp;</td>
+<td width="32%" bgcolor="#FFFFFF" height="79">
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="90%" class="menu01">
+  <tr>
+    <td width="33%">Direct:</td>
+    <td width="33%">Random :</td>
+    <td width="34%">&nbsp;Admin :</td>
+  </tr>
+  <tr>
+    <td width="33%">
+    <input type="text" name="pay_direct" size="12" value="{pay_direct}"></td>
+    <td width="33%">
+    <input type="text" name="pay_random" size="12" value="{pay_random}"></td>
+    <td width="34%">
+<input type="text" name="pay_admin" size="12" value="{pay_admin}"></td>
+  </tr>
+</table>
+<p>&nbsp;&nbsp;
+</td>
+</tr>
+<tr>
+<td width="12%" bgcolor="#FFFFFF" align="right" height="84">&nbsp;</td>
+<td width="32%" bgcolor="#FFFFFF" height="84">&nbsp;<p>&nbsp;</p>
+<p align="right"><input type="submit" value="Simpan Account !" name="button"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+  </center>
+</div>
+<input type="hidden" name="act" value="save">
+<input type="hidden" name="level" value="member">
+</form>
+<p>&nbsp;</p>
+<p>
+<b>
+<font size="1">
+    </font>
+    </b>

@@ -1,0 +1,65 @@
+<p align="center" style="text-indent: 20; line-height: 150%; margin-left: 10; margin-right: 10">
+<b>Contact Member</b></p>
+<form method="POST">
+<div align="center">
+  <center>
+<table border="0" cellpadding="2" width="95%" style="border: 1px solid #000080;; border-collapse:collapse" class="tableline" bordercolor="#111111" cellspacing="0">
+<tr>
+<td width="100%" bgcolor="#FFFFFF">
+<table border="0" width="100%" class="menu01" style="border-collapse: collapse" bordercolor="#111111" cellpadding="3" cellspacing="3">
+<tr>
+<td width="23%" align="right"><b>
+Dari :</b></td>
+<td width="77%">
+<input type="text" name="mailfrom" size="43" value="{admin_name} &lt;{admin_email}&gt;"></td>
+</tr>
+<tr>
+<td width="23%" align="right"><b>
+Judul :</b></td>
+<td width="77%">
+<input type="text" name="mailsubject" size="60" value="[{program_name}]"></td>
+</tr>
+<tr>
+<td width="23%" align="right"><b>
+Prioritas :</b></td>
+<td width="77%"><select size="1" name="priority">
+<option value="1">High</option>
+<option value="2">Low</option>
+<option value="3" selected>Standard</option>
+</select></td>
+</tr>
+<tr>
+<td width="23%" align="right"><b>
+Kirim ke :</b></td>
+<td width="77%"><select size="1" name="sento">
+<option value="All" selected>Semua Member</option>
+<option value="Paid">Paid Member</option>
+<option value="Free">Free Member</option>
+</select></td>
+</tr>
+<tr>
+<td width="23%" align="right" valign="top" rowspan="2"><b>
+Isi email :</b></td>
+<td width="77%" bgcolor="#FFFFFF">
+<p align="center">
+{userid} {password} {bank} {email} {name} {address} {phone} {direct_sponsor} 
+{random_sponsor} {pay_direct} {pay_random} {pay_admin} {joindate} {userlevel}</p>
+</td>
+</tr>
+<tr>
+<td width="77%"><textarea rows="15" name="msg" cols="48"></textarea></td>
+</tr>
+<tr>
+<td width="23%" align="right"></td>
+<td width="77%"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+  </center>
+</div>
+<p align="right"><input type="submit" value="Kirimkan Email !" name="button"> </p>
+<input type="hidden" name="uid" value="{uid}">
+</form>
+<p align="right">&nbsp;</p>

@@ -1,0 +1,31 @@
+<p align="center" style="text-indent: 20; line-height: 150%; margin-left: 10; margin-right: 10">
+<b>Admin Control Panel</b></p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber1">
+  <tr>
+    <td width="50%" valign="top"><p align="left">
+<span style="font-weight: 700">Jumlah member anda :</span></p>
+    <p align="left">
+Total Member : {total_member}<br>
+Paid Member : {paid_member}<br>
+Free Member : {free_member}<br>
+<a href="members.php">Klik di sini</a> untuk melihat semua member anda...</p>
+    <p align="left">
+<b>Total pembayaran :</b></p>
+    <p align="left">
+Admin : Rp.{admin_payment}<br>
+Direct Sponsor : Rp.{direct_payment}<br>
+Random Sponsor : Rp.{random_payment}</p>
+    <p align="left">
+<b>Total kunjungan website anda :</b></p>
+    <p align="left">
+Total : {total_stats}<br>
+<a href="stats.php">Klik di sini</a> untuk melihat statistik website anda...</p>
+    <p>&nbsp;</td>
+    <td width="50%" valign="top">&nbsp;<p><b>Pencarian member :</b></p>
+    <form method="POST" action="members.php">
+      <p>Kata kunci : <input type="text" name="query" size="20">
+      <input type="submit" value="Cari" name="B1"></p>
+    </form>
+    </td>
+  </tr>
+</table>

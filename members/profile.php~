@@ -1,0 +1,96 @@
+<?php
+    #***********************************************************************#
+    #                                                                       #
+    # "Script PHP untuk program affiliasi, reseller, mlm dan arisan online" #
+    #                   										            #
+    #                                                                       #
+    #***********************************************************************#
+    # File : profile.php
+    # Defenisi :
+    # Untuk menampilkan halaman profil member di control panel member
+
+    require("../config_inc.php");
+    require("../func_inc.php");
+    require("login_inc.php");
+    
+    $error = "";
+    if (isset($_POST['actions']) && $_POST['actions']=="changeProfile") {
+	$email = $_POST['email'];
+	$userid = $_POST['userid'];
+	$memname = $_POST['memname'];
+	$phone = $_POST['phone'];
+	$address = $_POST['address'];
+	$bank = $_POST['bank'];
+	
+        if (!check_email($email)) {
+             $error .= "<li>Mohon diisi email yang benar.</li>";
+        }
+        if (!strlen($memname)) {
+             $error .= "<li>Mohon diisi nama lengkap anda.</li>";
+        }
+        if (!strlen($phone)) {
+             $error .= "<li>Mohon diisi Nomor Telepon/Hp anda.</li>";
+        }
+
+        if ($error) {
+             display_html($error, "error.html");
+        }
+
+        $qdb = "UPDATE members SET 
+            name = '$memname',
+            bank ='$bank',
+            address ='$address',
+            phone ='$phone' ,
+            email ='$email' 
+            WHERE userid = '$userid'";
+
+        $dbres = mysql_query($qdb, $dbcon) or show_error("Maaf, Data anda tidak bisa disimpan");
+	header("Location: ./profile.php");
+    }
+
+     if (isset($_POST['actions']) && $_POST['actions']=="changePassword") {
+	$passwordLama = $_POST['passwordLama'];
+	$passwordBaru = $_POST['passwordBaru'];
+	$ulangiPasswordBaru = $_POST['ulangiPasswordBaru'];
+	$userid = $_POST['userid'];
+
+	if(!strlen($passwordLama)) {
+		$error .= "<li>Mohon diisi Password Lama anda.</li>";
+	}
+	else {
+		if(!match_password($userid, $passwordLama)) {
+			$error .= "<li>Password Lama anda salah.</li>";
+		}
+		else {
+			if(!strlen($passwordBaru)) {
+				$error .= "<li>Mohon diisi Password Baru anda.</li>";		
+			}
+			else {
+				if(!strlen($ulangiPasswordBaru)) {
+					$error .= "<li>Mohon diisi Password Baru anda.</li>";
+				}
+				else {
+					if($passwordBaru != $ulangiPasswordBaru) {
+						$error .= "<li>Password Baru tidak sama.</li>";
+					}
+				}
+			}
+		}
+	}
+
+	if ($error) {
+             display_html($error, "error.html");
+        }
+	
+        $qdb = "UPDATE members SET 
+            password = md5('$passwordBaru') 
+            WHERE userid = '$userid'";
+
+        $dbres = mysql_query($qdb, $dbcon) or show_error("Maaf, Data anda tidak bisa disimpan");
+	header("Location: ./profile.php");	
+     }
+
+    //mempersiapkan tempasswordBaruplate untuk ditampilkan
+    display_member_page("member_account.html");
+
+?>
